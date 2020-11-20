@@ -44,9 +44,14 @@ function draw() {
  
 }
 function keyPressed() {
-	if (keyCode === UP_ARROW) {
-	Matter.Body.applyforce(garbage.body,garbage.body.position,{x:100,y:-100});
-}   }
+	if (keyCode === UP_ARROW){
+		Matter.Body.applyForce(garbage.body,garbage.body.position,{x:55,y:-55});
+	}
+	 
+
+
+
+   }
 
 
 

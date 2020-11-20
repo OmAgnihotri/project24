@@ -14,6 +14,7 @@ class Paper
         World.add(world,this.body);
        
     }
+    
         display(){
     var paperpos = this.body.position;
     push()

@@ -11,37 +11,42 @@ function preload()
 
 function setup() {
 	createCanvas(800, 700);
-
-
 	engine = Engine.create();
 	world = engine.world;
 
-	//Create the Bodies Here.
-	Wall1=createSprite(600,650,150,10);
-	
-	Wall2=createSprite(530,610,10,75);
-	
-	Wall3=createSprite(670,610,10,75);
-	
-    garbage=createSprite(100,650,20,20);
+
+	base = new Ground(400,550,800,10);
+	 
+	garbage = new Paper(180,500,20); 
+   
+	dustbin1 = new Dustbin(550,500,20,100);
+	dustbin2 = new Dustbin(650,550,200,20);
+	dustbin3 = new Dustbin(750,500,20,100);
 
 	Engine.run(engine);
 	
 }
 
 function draw() {
-  rectMode(CENTER);
-  background(0);
+	rectMode(CENTER);
+	background(0);
+	base.display();
+
+	garbage.display();
+
+	dustbin1.display();
+	dustbin2.display();
+	dustbin3.display();
+
+
   
-  drawSprites();
+  
  
 }
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
-	   garbage.velocityX=12;
-	   garbage.velocityY=-20;
-	   garbage.velocityY=garbage.velocityY+8;
-}   
-}
+	Matter.Body.applyforce(garbage.body,garbage.body.position,{x:100,y:-100});
+}   }
+
 
 

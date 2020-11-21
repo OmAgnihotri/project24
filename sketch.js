@@ -19,9 +19,9 @@ function setup() {
 	 
 	garbage = new Paper(180,500,20); 
    
-	dustbin1 = new Dustbin(550,500,20,100);
-	dustbin2 = new Dustbin(650,550,200,20);
-	dustbin3 = new Dustbin(750,500,20,100);
+	dustbin1 = new Dustbin(540,495,20,100);
+	dustbin2 = new Dustbin(650,535,200,20);
+	dustbin3 = new Dustbin(750,495,20,100);
 
 	Engine.run(engine);
 	
